@@ -18,14 +18,21 @@ $f3->route('GET /', function() {
     echo '<h1>Hello, pets!</h1>';
 
     //Instantiate a pet object
-    $pet1 = new Pet();
+    $pet1 = new Pet("Fido", "pink");
+
+    //Test setter and getter
+    $pet1->setName("Fifi");
+    echo "My pet's name is " . $pet1->getName();
+
+    echo "<pre>";
+    var_dump($pet1);
+    echo "</pre>";
+    //$pet1 = new Pet();
 
     //Invoke the pet methods
     $pet1->eat();
     $pet1->talk();
     $pet1->sleep();
-
-
 
 });
 
